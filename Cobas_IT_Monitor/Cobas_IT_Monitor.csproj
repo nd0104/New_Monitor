@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E94EFE7-7EB3-44D4-B5F2-286C4E680D46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CobasITMonitor</RootNamespace>
+    <AssemblyName>CobasITMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COM.Excel">
+      <HintPath>bin\COM.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b" />
+    <Reference Include="Excel">
+      <HintPath>bin\Excel.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Owc11">
+      <HintPath>bin\Microsoft.Office.Interop.Owc11.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient">
+      <HintPath>bin\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class.cs" />
+    <Compile Include="CPUMEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPUMEM.Designer.cs">
+      <DependentUpon>CPUMEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerconfig.Designer.cs">
+      <DependentUpon>customerconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diskconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diskconfig.Designer.cs">
+      <DependentUpon>diskconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emailtest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emailtest.Designer.cs">
+      <DependentUpon>emailtest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="excelout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="excelout.Designer.cs">
+      <DependentUpon>excelout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ipconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ipconfig.Designer.cs">
+      <DependentUpon>ipconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT3KOPTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT3KOPTION.Designer.cs">
+      <DependentUpon>IT3KOPTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT3K_LOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT3K_LOG.Designer.cs">
+      <DependentUpon>IT3K_LOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="monitor.cs" />
+    <Compile Include="Numoftable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Numoftable.designer.cs">
+      <DependentUpon>Numoftable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="progresser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progresser.Designer.cs">
+      <DependentUpon>progresser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Show_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_details.Designer.cs">
+      <DependentUpon>Show_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sizeofdb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sizeofdb.designer.cs">
+      <DependentUpon>sizeofdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="softwareconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="softwareconfig.Designer.cs">
+      <DependentUpon>softwareconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="syslogconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="syslogconfig.designer.cs">
+      <DependentUpon>syslogconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool.cs" />
+    <Compile Include="work.cs" />
+    <Compile Include="servermonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servermonitor.Designer.cs">
+      <DependentUpon>servermonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPUMEM.resx">
+      <DependentUpon>CPUMEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerconfig.resx">
+      <DependentUpon>customerconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="diskconfig.resx">
+      <DependentUpon>diskconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emailtest.resx">
+      <DependentUpon>emailtest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="excelout.resx">
+      <DependentUpon>excelout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ipconfig.resx">
+      <DependentUpon>ipconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT3KOPTION.resx">
+      <DependentUpon>IT3KOPTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT3K_LOG.resx">
+      <DependentUpon>IT3K_LOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Numoftable.resx">
+      <DependentUpon>Numoftable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progresser.resx">
+      <DependentUpon>progresser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_details.resx">
+      <DependentUpon>Show_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sizeofdb.resx">
+      <DependentUpon>sizeofdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="softwareconfig.resx">
+      <DependentUpon>softwareconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servermonitor.resx">
+      <DependentUpon>servermonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="syslogconfig.resx">
+      <DependentUpon>syslogconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
